@@ -125,6 +125,8 @@ const (
 	OWM SegmentType = "owm"
 	// Memory writes used memory percentage
 	Memory SegmentType = "memory"
+	// PlasticSCM represents the plastiscm status and information
+	PlasticSCM SegmentType = "plasticscm"
 )
 
 func (segment *Segment) string() string {
@@ -267,6 +269,7 @@ func (segment *Segment) mapSegmentWithWriter(env environmentInfo) error {
 		Nbgv:          &nbgv{},
 		Rust:          &rust{},
 		Memory:        &memory{},
+		PlasticSCM:    &plasticscm{},
 	}
 	if writer, ok := functions[segment.Type]; ok {
 		props := &properties{

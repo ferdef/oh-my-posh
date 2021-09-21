@@ -169,7 +169,8 @@
             "dart",
             "rust",
             "owm",
-            "memory"
+            "memory",
+            "plasticscm"
           ]
         },
         "style": {
@@ -1680,6 +1681,33 @@
                     "title": "Memory type",
                     "description": "whether to show physical or swap memory",
                     "default": "physical"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": { "const": "plasticscm" }
+            }
+          },
+          "then": {
+            "title": "Get Plastic scm status",
+            "description": "https://ohmyposh.dev/docs/plasticscm",
+            "properties": {
+              "properties": {
+                "properties": {
+                  "cmPath": {
+                    "type" : "string",
+                    "title": "Path to Binary",
+                    "default": "cm"                    
+                  },
+                  "scmFolder": {
+                    "type" : "string",
+                    "title": "PlasticSCM Folder Name",
+                    "default": ".plastic"                    
                   }
                 }
               }

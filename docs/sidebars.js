@@ -47,6 +47,7 @@ module.exports = {
         "os",
         "owm",
         "path",
+        "plasticscm",
         "python",
         "root",
         "ruby",
